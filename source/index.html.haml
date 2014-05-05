@@ -29,3 +29,24 @@ page_classes: front-page header-page
 
       %form(method="post" action="http://lists.manageiq.org/mailman/subscribe/newsletter")
         %input(name="email")
+
+%section.blog-area
+  .row
+
+    %section.col-md-8
+
+      %section.blog-posts
+
+        %h2 From the blog…
+        = partial :blog_posts, locals: locals
+
+
+    %section.col-md-4
+      %section.blog-archive
+        %h2 Recent posts
+        %ol
+          %li Lorem ipsum dolor sit amet
+          %li Consectetur adipiscing elit
+          %li Eget porttitor lorem
+
+
