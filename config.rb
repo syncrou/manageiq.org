@@ -139,9 +139,9 @@ page "/.htacces.html", :directory_index => false
 
 proxy "/.htaccess", "/.htaccess.html", :locals => {}, :ignore => true
 
-data.deploy_types.each do |deploy_type, deploy_name|
-  proxy "/download/#{deploy_type}.html", "/download/index.html", locals: {deploy_type: deploy_type, deploy_name: deploy_name}
-end
+#data.deploy_types.each do |deploy_type, deploy_name|
+  #proxy "/download/#{deploy_type}.html", "/download/index.html", locals: {deploy_type: deploy_type, deploy_name: deploy_name}
+#end
 
 ready do
   # Add author pages
