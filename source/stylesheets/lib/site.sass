@@ -74,17 +74,25 @@ pre, code
 
 
 .masthead
-  @extend .row
+  //@extend .row
   z-index: 100
+  margin: 0 auto
+  text-align: center
 
   .hgroup
-    @extend .col-lg-3
+    //@extend .col-lg-3
 
   #access
-    @extend .col-lg-9
+    //@extend .col-lg-9
 
-  h1 > a
+  .logo
     padding: 6px 24px
+    margin: 2em 0 0
+    max-width: 100%
+    height: auto
+
+  h1
+    float: none
 
   nav
     // See _bootstrap-custom.sass for bootstrap-related changes
@@ -109,7 +117,7 @@ pre, code
     nav
       //font-size: 18pt
 
-  @media screen and (min-width: 1024px)
+  //@media screen and (min-width: 1024px)
     .hgroup
       float: left
 
@@ -190,17 +198,21 @@ pre, code
           padding-bottom: 0.5ex
 
 
+@import compass/css3/images
+
 .page-header
-  background: $bg-header-color
-  background-size: 50%
+  //background: $bg-header-color
+  @include background-image(linear-gradient(#f1f1f1,#f1f1f1 88%,#e9e9e9))
+  //background-size: 50%
   border-bottom: 1px solid rgba(0,0,0,0.25)
   margin: 0
   padding: 4em 0 1em
   text-align: center
 
   h2
-    font-size: 48pt !important
-    margin: 0 auto
+    font-size: 32pt !important
+    margin: 0.5em auto 0
+    opacity: 0.7
 
     &.with-type
       font-size: 28pt !important
@@ -214,7 +226,7 @@ pre, code
     margin-top: 1ex
     font-weight: normal
     opacity: 0.5
-    font-size: 24pt
+    font-size: 20pt
 
   h2 + p
     padding-top: 1em
@@ -229,9 +241,9 @@ pre, code
 body.front-page
 
   .page-header
-    background: $bg-header-color
-    background-size: cover
-    padding: 11em 0 5em
+    //background: $bg-header-color
+    //background-size: cover
+    padding: 10em 0 2em
     text-shadow: 0 0 15px white
 
     h2

@@ -13,14 +13,28 @@ page_classes: front-page header-page
       %h2 Your gateway to the open cloud
       %h3 automate, optimize, and control all cloud services
 
-
-%section.overview
+%section.overview-basic
   .row
 
-    %section.col-md-5
+    %section.col-md-8
 
       :markdown
-        ## Sign up for more details
+        ## Coming soon
+
+        An open sourced ManageIQ is nearly ready for release! Check back soon (or sign up below) for more details.
+
+        Here are a few highlights of what you can expect:
+
+        * shift workloads between all major cloud platforms — example: optimize for cheapest / geo / performance / platform / scaling preferences
+        * works with most popular platforms: AWS, Rackspace, OpenStack, vSphere (VCAC?), RHEV
+        * policies (automation / logic) set and manage policies for cloud apps, workloads, and cloud providers
+        * complete lifecycle management for all workloads (details, please…)
+
+
+    %section.col-md-4
+
+      :markdown
+        ## Join our annoucement list!
 
         We’ll add you to our annoucement mailing list with more
         information as it happens. This text here is to tell you what
@@ -29,11 +43,13 @@ page_classes: front-page header-page
 
       %form(method="post" action="http://lists.manageiq.org/mailman/subscribe/newsletter")
         %input(name="email")
+        %button
+          Subscribe!
 
 %section.blog-area
   .row
 
-    %section.col-md-8
+    %section.col-md-12
 
       %section.blog-posts
 
@@ -41,7 +57,7 @@ page_classes: front-page header-page
         = partial :blog_posts, locals: locals
 
 
-    %section.col-md-4
+    -#%section.col-md-4
       %section.blog-archive
         %h2 Recent posts
         %ol
@@ -49,4 +65,20 @@ page_classes: front-page header-page
           %li Consectetur adipiscing elit
           %li Eget porttitor lorem
 
+
+%section.social-area
+  :ruby
+    social = {
+      twitter: "http://twitter.com/ManageIQ",
+      facebook: "foo",
+      "google-plus" => "foo"
+    }
+
+  .row
+
+    %section.col-md-12
+      - social.each do |service, url|
+        %a{href:url}
+          %i{class:"fa fa-#{service}"}
+          = "#{service}".titlecase
 
