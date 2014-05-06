@@ -41,9 +41,9 @@ page_classes: front-page header-page
         happens, like how we won't spam you and stuff like that. But
         I need the text, so give me text please.
 
-      %form(method="post" action="http://lists.manageiq.org/mailman/subscribe/newsletter")
-        %input(name="email")
-        %button
+      %form(role="form" method="post" class="form-inline" action="http://lists.manageiq.org/mailman/subscribe/newsletter")
+        %input(name="email" class="form-control")
+        %button(class="btn btn-primary")
           Subscribe!
 
 %section.blog-area
