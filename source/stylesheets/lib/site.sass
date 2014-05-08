@@ -298,6 +298,16 @@ body.front-page
     .row:first-child
       border-top: none
 
+      h2
+        font-size: 275%
+
+      h2,
+      p
+        text-align: center
+
+      p+p
+        margin-top: 3em
+
     ul
       padding-bottom: 1ex
       overflow: hidden
@@ -305,11 +315,9 @@ body.front-page
 
       li
         @extend .col-md-6
-        padding: 1.25ex 0 1.5ex
+        padding: 1.25ex 1.5em 1.5ex
         list-style: none
         position: relative
-        padding-right: 5em
-        padding-left: 9px
         //font-size: 110%
         color: #777
 
@@ -325,7 +333,7 @@ body.front-page
           //@extend .fa-check-square-o
           @extend .fa-check-square-o
           position: absolute
-          left: -22px
+          left: -10px
           top: 1.1ex
           font-size: 22px
           //opacity: 0.4
