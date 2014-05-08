@@ -15,41 +15,46 @@ page_classes: front-page header-page
 
 %section.overview-basic
   .row
-
-    %section.col-md-8
+    %section.col-md-10.col-md-offset-1
 
       :markdown
         ## Coming soon
 
-        An open sourced ManageIQ is nearly ready for release! Check back soon (or sign up below) for more details.
+        Our cloud management elves are busily preparing ManageIQ for its
+        open source release!
 
-        Here are a few highlights of what you can expect:
+        Here are a few highlights of what to expect:
 
-        * shift workloads between all major cloud platforms — example: optimize for cheapest / geo / performance / platform / scaling preferences
-        * works with most popular platforms: AWS, Rackspace, OpenStack, vSphere (VCAC?), RHEV
-        * policies (automation / logic) set and manage policies for cloud apps, workloads, and cloud providers
-        * complete lifecycle management for all workloads (details, please…)
+        * shift workloads between major cloud platforms
+        * optimize for geography, price, performance, platform and scaling preferences
+        * integrate with most popular platforms: AWS, OpenStack, vSphere, and RHEV
+        * set and manage automation policies for cloud apps, workloads, and cloud providers
+
+        Check back soon or sign up to get the latest news as it happens.
 
 
-    %section.col-md-4
-
+  .row
+    %section.col-md-10.col-md-offset-1
       :markdown
-        ## Join our annoucement list!
+        ## Join the ManageIQ community
 
-        We’ll add you to our annoucement mailing list with more
-        information as it happens. This text here is to tell you what
-        happens, like how we won't spam you and stuff like that. But
-        I need the text, so give me text please.
+    .col-md-5.col-md-offset-1
+      :markdown
+        Sign up for our announcement mailing list to get early access to beta
+        pre-releases, newsletters, and announcements before anyone else.
 
-      %form(role="form" method="post" class="form-inline" action="http://lists.manageiq.org/mailman/subscribe/newsletter")
-        %input(name="email" class="form-control")
-        %button(class="btn btn-primary")
-          Subscribe!
+    .col-md-5
+
+      - form_url = "http://lists.manageiq.org/mailman/subscribe/newsletter"
+
+      = form_tag form_url, class: "form-inline", method: "post", role: "form" do
+        = text_field_tag :email, class: "email-address form-control", placeholder: "you@domain.com"
+        = submit_tag "Subscribe!", class: "btn btn-primary"
 
 %section.blog-area
   .row
 
-    %section.col-md-12
+    %section.col-md-10.col-md-offset-1
 
       %section.blog-posts
 
@@ -81,4 +86,3 @@ page_classes: front-page header-page
         %a{href:url}
           %i{class:"fa fa-#{service}"}
           = "#{service}".titlecase
-
