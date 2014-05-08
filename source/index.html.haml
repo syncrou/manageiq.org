@@ -47,7 +47,7 @@ page_classes: front-page header-page
 
       - form_url = "http://lists.manageiq.org/mailman/subscribe/newsletter"
 
-      = form_tag form_url, class: "form-inline", method: "post", role: "form" do
+      = form_tag form_url, class: "form-email form-inline", method: "post", role: "form" do
         = text_field_tag :email, class: "email-address form-control", placeholder: "you@domain.com"
         = submit_tag "Subscribe!", class: "btn btn-primary"
 
