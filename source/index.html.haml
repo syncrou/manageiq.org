@@ -4,7 +4,7 @@ page_classes: front-page header-page
 ---
 
 - content_for :head do
-  %link(href="/blog/feed.xml" rel="alternate" title="Atom feed" type="application/atom+xml")
+  -#%link(href="/blog/feed.xml" rel="alternate" title="Atom feed" type="application/atom+xml")
 
 %section.page-header
   .row
@@ -51,7 +51,7 @@ page_classes: front-page header-page
         = text_field_tag :email, class: "email-address form-control", placeholder: "you@domain.com"
         = submit_tag "Subscribe!", class: "btn btn-success"
 
-%section.blog-area
+-#%section.blog-area
   .row
 
     %section.col-md-10.col-md-offset-1
